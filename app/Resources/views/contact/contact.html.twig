@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <body style="width: 70%; margin: 8%">
+    
+    <center><h1>Contact</h1><br></center>
+    
+
+{{ form_start(form) }}
+
+    <div class="campos">
+        {{ form_widget(form.subject) }}
+        {{ form_errors(form.subject) }}
+    </div>
+    <div class="campos">
+        {{ form_widget(form.name) }}
+        {{ form_errors(form.name) }}
+    </div>
+    <div class="campos">
+        {{ form_widget(form.email) }}
+        {{ form_errors(form.email) }}
+    </div>
+    <div class="campos">
+        {{ form_widget(form.message) }}
+        {{ form_errors(form.message) }}
+    </div>
+
+    <br><br>
+    
+
+    
+    <input type="submit" value="Enviar" class="btn boton">
+    <input type="reset" value="Borrar" class="btn boton">
+
+    
+{{ form_end(form) }}
+    
+    </body>
+    
+{% endblock %}

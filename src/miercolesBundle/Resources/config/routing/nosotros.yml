@@ -1,0 +1,5 @@
+nosotros_index:
+    path:     /
+    defaults: { _controller: "miercolesBundle:nosotros:index" }
+    methods:  GET
+

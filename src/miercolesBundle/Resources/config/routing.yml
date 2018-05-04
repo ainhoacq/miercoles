@@ -1,0 +1,40 @@
+miercoles_miercolesentidad:
+    resource: "@miercolesBundle/Resources/config/routing/miercolesentidad.yml"
+    prefix:   /miercolesentidad
+    
+miercoles_nosotros:
+    resource: "@miercolesBundle/Resources/config/routing/nosotros.yml"
+    prefix:   /nosotros
+
+miercoles_inicio:
+    resource: "@miercolesBundle/Resources/config/routing/inicio.yml"
+    prefix:   /inicio
+
+miercoles_contacto:
+    resource: "@miercolesBundle/Resources/config/routing/contacto.yml"
+    prefix:   /contacto
+
+miercoles_contact:
+    resource: "@miercolesBundle/Resources/config/routing/contact.yml"
+    prefix:   /contact
+
+
+miercoles_homepage:
+    path:     /
+    defaults: { _controller: miercolesBundle:miercolesentidad:index }
+
+miercoles_nosotros:
+    path:     /
+    defaults: { _controller: miercolesBundle:nosotros:index }
+    
+miercoles_inicio:
+    path:     /
+    defaults: { _controller: miercolesBundle:inicio:index }
+        
+miercoles_contacto:
+    path:     /
+    defaults: { _controller: miercolesBundle:contacto:index }
+    
+miercoles_contact:
+    path:     /
+    defaults: { _controller: miercolesBundle:contact:contact }

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Welcome</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+<style>
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   height: 20%;
+   background-color: gray;
+   color: white;
+   text-align: center;
+}
+
+.rs {
+    color: green;
+}
+
+.rs:hover {
+    color: red;
+    text-decoration: none;
+}
+
+.rrss {
+    width: 100px;
+    height: 105px;
+    position: absolute;
+    right: 0;
+    bottom: 630px;
+    padding: 15px;
+    background-color: #cae8ca;
+    border-radius: 15px;
+    border: 2px dashed #4CAF50; 
+    transition: width 0.5s;
+}
+
+.rrss:hover {
+    width: 220px;
+    background-color: #B7D8B7;
+}
+
+.campos {
+    height: 40px;
+}
+
+.boton {
+    background-color: #ffb4ff;
+}
+
+.boton:hover {
+    background-color: #973097;
+    color: white;
+}
+
+</style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand">MySymfonyApp</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="{{ path('inicio_index') }}">Inicio</a></li>
+      <li><a href="{{ path('nosotros_index') }}">Sobre nosotros</a></li>
+      <li><a href="{{ path('contacto_index') }}">Contacto</a></li>
+      <li><a href="{{ path('miercolesentidad_index') }}">CRUD</a></li>
+      <li><a href="{{ path('contact_contact') }}">Formu</a></li>
+    </ul>
+  </div>
+</nav>     
+
+        {% block body %}{% endblock %}
+        {% block javascripts %}{% endblock %}
+        
+        
+<div class="footer" style="padding-top: 5%">
+    <h4>Ainhoa's project. All rights reserved.</h4>
+    <div class="rrss">
+        <a href="http://{{'www.google.es'}}" class="rs">Google</a>
+        <a href="http://{{'www.twitter.com'}}" class="rs">Twitter</a>
+        <a href="http://{{'www.facebook.com'}}" class="rs">Facebook</a>
+    </div>
+</div>        
+        
+    </body>
+</html>
+
+

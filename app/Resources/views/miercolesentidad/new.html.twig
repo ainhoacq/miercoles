@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Crear nuevo registro</h1>
+    <body style="width: 70%; margin: 8%">
+   {{ form_start(form) }}
+        {{ form_widget(form) }}
+        <br><input type="submit" value="Create" class="btn btn-warning" />
+    {{ form_end(form) }}
+
+
+    <br><a href="{{ path('miercolesentidad_index') }}" class="btn btn-info">Back to the list</a>
+
+    </body>
+{% endblock %}

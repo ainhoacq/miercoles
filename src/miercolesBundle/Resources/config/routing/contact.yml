@@ -1,0 +1,4 @@
+contact_contact:
+    path:     /
+    defaults: { _controller: "miercolesBundle:contact:contact" }
+

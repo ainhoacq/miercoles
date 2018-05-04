@@ -1,0 +1,5 @@
+contacto_index:
+    path:     /
+    defaults: { _controller: "miercolesBundle:contacto:index" }
+    methods:  GET
+

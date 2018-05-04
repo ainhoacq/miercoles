@@ -1,0 +1,24 @@
+miercolesentidad_index:
+    path:     /
+    defaults: { _controller: "miercolesBundle:miercolesEntidad:index" }
+    methods:  GET
+
+miercolesentidad_show:
+    path:     /{id}/show
+    defaults: { _controller: "miercolesBundle:miercolesEntidad:show" }
+    methods:  GET
+
+miercolesentidad_new:
+    path:     /new
+    defaults: { _controller: "miercolesBundle:miercolesEntidad:new" }
+    methods:  [GET, POST]
+
+miercolesentidad_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "miercolesBundle:miercolesEntidad:edit" }
+    methods:  [GET, POST]
+
+miercolesentidad_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "miercolesBundle:miercolesEntidad:delete" }
+    methods:  DELETE

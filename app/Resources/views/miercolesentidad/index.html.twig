@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <center><h1>Lista de registros</h1></center><br>
+    <body style="width: 70%; margin: 8%">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Direccion</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for miercolesEntidad in miercolesEntidads %}
+            <tr>
+                <td><a href="{{ path('miercolesentidad_show', { 'id': miercolesEntidad.id }) }}">{{ miercolesEntidad.id }}</a></td>
+                <td>{{ miercolesEntidad.nombre }}</td>
+                <td>{{ miercolesEntidad.apellido }}</td>
+                <td>{{ miercolesEntidad.direccion }}</td>
+                <td>
+                <a href="{{ path('miercolesentidad_show', { 'id': miercolesEntidad.id }) }}" class="btn btn-success">Ver entrada</a>
+                <a href="{{ path('miercolesentidad_edit', { 'id': miercolesEntidad.id }) }}" class="btn btn-warning">Editar entrada</a>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+
+        <div class="navigation">
+            {{ knp_pagination_render(miercolesEntidads) }}
+        </div><br>        
+              
+
+    <a href="{{ path('miercolesentidad_new') }}" class="btn btn-info">Crear una nueva entrada en la entidad</a>
+
+    <a href="{{ path('nosotros_index') }}" class="btn btn-primary">Ir a nosotros</a>
+    
+    <a href="{{ path('inicio_index') }}" class="btn btn-primary">Ir a inicio</a>
+    
+    <a href="{{ path('contacto_index') }}" class="btn btn-primary">Ir a contacto</a>
+    
+    
+    </body>        
+            
+{% endblock %}

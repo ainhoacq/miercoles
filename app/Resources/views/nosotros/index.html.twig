@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <body style="width: 70%; margin: 8%">
+    
+    <center><h1>Sobre nosotros:</h1></center><br>
+
+    <p>Somos una pequeña empresa situada en Melilla.</p><br>
+      
+    <img src="{{ asset( 'assets/gatito.jpg' ) }}" style="width: 60%" /><br><br>
+    
+    <a href="{{ path('miercolesentidad_index') }}" class="btn btn-primary">Ir a la lista principal</a>
+
+    <a href="{{ path('inicio_index') }}" class="btn btn-primary">Ir a inicio</a>
+    
+    <a href="{{ path('contacto_index') }}" class="btn btn-primary">Ir a contacto</a>
+
+    
+    </body>
+    
+{% endblock %}

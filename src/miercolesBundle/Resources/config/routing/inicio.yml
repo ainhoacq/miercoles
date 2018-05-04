@@ -1,0 +1,5 @@
+inicio_index:
+    path:     /
+    defaults: { _controller: "miercolesBundle:inicio:index" }
+    methods:  GET
+
